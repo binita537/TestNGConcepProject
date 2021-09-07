@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<parameter name="SuiteLevelKey1" value="SuiteLevelValue1" />
+	<parameter name="SuiteLevelKey2" value="SuiteLevelValue2" />
+	<test thread-count="5" name="Test">
+
+
+		<parameter name="TestLevelKey1" value="TestLevelValue1" />
+		<parameter name="TestLevelKey2" value="TestLevelValue2" />
+
+		<classes>
+
+			<class name="ParameterAndDataProvider.ParameterTestNG" />
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

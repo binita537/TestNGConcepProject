@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="DependsOnMethods">
+		<classes>
+
+
+			<class name="com.qatestng.TestNgConcept.DependsOnMethods">
+				<methods>
+
+					<include name="SecondTest" />
+					<!-- 
+					
+					 <include name="FirstTest" dependsOnMethods="SecondTest" />
+					
+					-->
+				</methods>
+			</class>
+
+		</classes>
+
+
+
+
+
+
+	</test> <!-- Test -->
+
+	<test thread-count="5" name="Test2">
+
+		<groups>
+			<dependencies>
+				<group name="smoke" depends-on="Login" />
+			</dependencies>
+		</groups>
+		<classes>
+			<class name="DependsOn.DependsOnGroups" />
+		</classes>
+
+
+
+
+
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
